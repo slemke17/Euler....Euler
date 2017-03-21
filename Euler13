@@ -1,0 +1,11 @@
+results = []
+with open('euler13input.txt') as inputfile:
+    for line in inputfile:
+        results.append(line.strip())
+results=[int(s) for s in results]
+
+total=0
+for i in range(0,len(results)):
+    total = total+results[i]
+
+print(total)
