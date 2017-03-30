@@ -1,0 +1,17 @@
+def lychrel(n, it):
+    c = 0
+    while c < it:
+        revn=int(str(n)[::-1])
+        n += revn
+        if str(n)[::-1] == str(n):
+            return False
+        c += 1
+    return True
+
+max = 10000
+it = 50
+c=0
+for i in range(10000):
+    if lychrel(i,it):
+        c += 1
+print(c)
